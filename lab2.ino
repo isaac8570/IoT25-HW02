@@ -1,5 +1,5 @@
-const int buttonPin = 4;    // 버튼은 GPIO 4번
-const int ledPin = 2;       // LED는 GPIO 2번 (내장)
+const int buttonPin = 4;    // button
+const int ledPin = 2;       // LED
 
 int buttonState = 0;
 
@@ -10,12 +10,12 @@ void setup() {
 }
 
 void loop() {
-    // default: on
+
   buttonState = digitalRead(buttonPin);
 
   if (buttonState == LOW) {
-    digitalWrite(ledPin, HIGH); // 버튼 누르면 LED 켜짐
+    digitalWrite(ledPin, HIGH); // led on
   } else {
-    digitalWrite(ledPin, LOW);  // 떼면 꺼짐
+    digitalWrite(ledPin, LOW);  // led off
   }
 }
